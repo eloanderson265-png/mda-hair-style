@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MDA Hair Style — Ladies Hair Salon in Sharjah</title>
+<meta name="description" content="MDA Hair Style is a ladies-only hair salon near National Paint, on the way to Al Nada, Sharjah. Book your appointment on WhatsApp today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b2320;
+    --rose:#c98a7d;
+    --rose-dark:#a96b5f;
+    --cream:#faf5f0;
+    --cream-2:#f2e9e1;
+    --gold:#b08d57;
+    --line:#e7dcd3;
+    --whatsapp:#25D366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Jost',sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.logo{font-family:'Playfair Display',serif;}
+  a{text-decoration:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,245,240,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto;}
+  .logo{font-size:22px;font-weight:600;letter-spacing:0.5px;}
+  .logo span{color:var(--rose-dark);}
+  .nav-links{display:flex;gap:28px;font-size:15px;}
+  .nav-links a{opacity:0.85;transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;color:var(--rose-dark);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--whatsapp);color:#fff;
+    padding:12px 22px;border-radius:100px;
+    font-size:15px;font-weight:500;
+    box-shadow:0 6px 16px rgba(37,211,102,0.28);
+    transition:transform .15s, box-shadow .15s;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(37,211,102,0.35);}
+  .btn svg{width:18px;height:18px;flex-shrink:0;}
+  .btn-outline{
+    background:transparent;color:var(--ink);
+    border:1.5px solid var(--ink);
+    box-shadow:none;
+  }
+  .btn-outline:hover{background:var(--ink);color:#fff;transform:none;}
+
+  /* Hero */
+  .hero{
+    position:relative;overflow:hidden;
+    padding:88px 24px 96px;
+    background:
+      radial-gradient(circle at 85% 15%, rgba(201,138,125,0.16), transparent 45%),
+      radial-gradient(circle at 10% 90%, rgba(176,141,87,0.12), transparent 40%);
+  }
+  .hero-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:2px;text-transform:uppercase;
+    color:var(--rose-dark);font-weight:500;margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--rose-dark);}
+  .hero h1{font-size:46px;line-height:1.15;font-weight:600;margin-bottom:20px;}
+  .hero h1 em{font-style:italic;color:var(--rose-dark);}
+  .hero p.lead{font-size:18px;color:#5a4f49;max-width:480px;margin-bottom:32px;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px;}
+  .hero-note{font-size:14px;color:#7a6f68;display:flex;align-items:center;gap:8px;}
+  .hero-note svg{width:16px;height:16px;color:var(--rose-dark);flex-shrink:0;}
+
+  .hero-art{
+    position:relative;aspect-ratio:4/5;border-radius:24px;
+    background:linear-gradient(155deg,var(--rose) 0%, var(--rose-dark) 100%);
+    overflow:hidden;
+    box-shadow:0 30px 60px -20px rgba(169,107,95,0.45);
+  }
+  .hero-art::after{
+    content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,0.35);border-radius:18px;pointer-events:none;z-index:2;
+  }
+  .hero-art img{width:100%;height:100%;object-fit:cover;display:block;}
+  .hero-badge{
+    position:absolute;bottom:-18px;left:-18px;
+    background:#fff;border-radius:16px;padding:16px 20px;
+    box-shadow:0 14px 30px rgba(43,35,32,0.14);
+    display:flex;align-items:center;gap:12px;
+  }
+  .hero-badge .stars{color:var(--gold);font-size:15px;letter-spacing:2px;}
+  .hero-badge .num{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;}
+  .hero-badge .txt{font-size:12px;color:#7a6f68;}
+
+  /* Section shell */
+  section{padding:88px 0;}
+  .section-head{text-align:center;max-width:620px;margin:0 auto 52px;}
+  .section-head .eyebrow{justify-content:center;}
+  .section-head::before{content:none;}
+  .section-head h2{font-size:34px;font-weight:600;margin-bottom:14px;}
+  .section-head p{color:#5a4f49;font-size:16px;}
+
+  /* Services */
+  .services{background:var(--cream-2);}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .service-card{
+    background:#fff;border-radius:18px;overflow:hidden;
+    border:1px solid var(--line);
+    transition:transform .2s, box-shadow .2s;
+  }
+  .service-card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -18px rgba(43,35,32,0.18);}
+  .service-photo{aspect-ratio:4/3;background:var(--cream-2);}
+  .service-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .service-icon{
+    width:52px;height:52px;border-radius:14px;
+    background:linear-gradient(155deg,var(--rose),var(--rose-dark));
+    display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+  }
+  .service-icon svg{width:26px;height:26px;color:#fff;}
+  .service-body{padding:26px 26px 28px;}
+  .service-card h3{font-size:19px;font-weight:600;margin-bottom:10px;}
+  .service-card p{font-size:14.5px;color:#6b6059;margin-bottom:16px;}
+  .service-card .link{font-size:14px;font-weight:500;color:var(--rose-dark);display:inline-flex;align-items:center;gap:6px;}
+
+  /* Why us */
+  .why{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:center;}
+  .why-art{
+    aspect-ratio:1/1;border-radius:24px;overflow:hidden;
+    background:var(--cream-2);border:1px solid var(--line);
+  }
+  .why-art img{width:100%;height:100%;object-fit:cover;display:block;}
+  .why-list{display:grid;gap:22px;margin-top:28px;}
+  .why-item{display:flex;gap:16px;}
+  .why-item .ico{
+    width:40px;height:40px;border-radius:12px;flex-shrink:0;
+    background:var(--cream-2);display:flex;align-items:center;justify-content:center;
+  }
+  .why-item .ico svg{width:20px;height:20px;color:var(--rose-dark);}
+  .why-item h4{font-size:16.5px;font-weight:600;margin-bottom:4px;}
+  .why-item p{font-size:14.5px;color:#6b6059;}
+
+  /* Location */
+  .location{background:var(--cream-2);}
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+  .loc-card{
+    background:#fff;border-radius:20px;padding:36px;border:1px solid var(--line);
+  }
+  .loc-card h3{font-size:22px;font-weight:600;margin-bottom:18px;}
+  .loc-row{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start;}
+  .loc-row .ico{width:36px;height:36px;border-radius:10px;background:var(--cream-2);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .loc-row .ico svg{width:18px;height:18px;color:var(--rose-dark);}
+  .loc-row .t{font-weight:500;font-size:15px;}
+  .loc-row .s{font-size:14px;color:#6b6059;}
+  .map-frame{
+    aspect-ratio:4/3;border-radius:20px;overflow:hidden;border:1px solid var(--line);
+    background:var(--cream-2);
+  }
+  .map-frame iframe{width:100%;height:100%;display:block;}
+
+  /* Reviews placeholder */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .review-card{
+    border:1.5px dashed var(--line);border-radius:18px;padding:28px;
+    background:#fff;
+  }
+  .review-card .stars{color:var(--gold);margin-bottom:12px;letter-spacing:2px;}
+  .review-card p{font-size:14.5px;color:#8a8078;font-style:italic;}
+
+  /* CTA band */
+  .cta-band{
+    background:linear-gradient(155deg,var(--ink),#3d332e);
+    color:#fff;border-radius:28px;padding:56px 40px;
+    text-align:center;margin:0 24px;
+  }
+  .cta-band h2{font-size:30px;font-weight:600;margin-bottom:14px;}
+  .cta-band p{color:rgba(255,255,255,0.72);margin-bottom:30px;font-size:16px;}
+
+  footer{padding:48px 0 32px;text-align:center;}
+  footer .logo{justify-content:center;display:flex;margin-bottom:12px;}
+  footer p{font-size:13.5px;color:#8a8078;}
+
+  .fab{
+    position:fixed;bottom:24px;right:24px;z-index:60;
+    width:60px;height:60px;border-radius:50%;
+    background:var(--whatsapp);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 12px 28px rgba(37,211,102,0.4);
+    animation:pulse 2.4s infinite;
+  }
+  .fab svg{width:30px;height:30px;color:#fff;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,0.45);}
+    70%{box-shadow:0 0 0 16px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+  }
+
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-art{max-width:340px;margin:0 auto;}
+    .why{grid-template-columns:1fr;}
+    .service-grid{grid-template-columns:1fr 1fr;}
+    .reviews-grid{grid-template-columns:1fr;}
+    .loc-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:560px){
+    .hero h1{font-size:34px;}
+    .service-grid{grid-template-columns:1fr;}
+    .cta-band{padding:40px 24px;}
+    .cta-band h2{font-size:24px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">MDA <span>Hair Style</span></div>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#location">Location</a>
+    </nav>
+    <a class="btn" id="nav-whatsapp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.07c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.03.24-3.45-.72-2.91-1.16-4.77-4.12-4.92-4.31-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.28.14.47.21.53.34.07.12.07.72-.17 1.39Z"/></svg>
+      Chat on WhatsApp
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner wrap" style="padding:0;">
+    <div>
+      <div class="eyebrow">Ladies-Only Hair Salon · Sharjah</div>
+      <h1>Beautiful hair, <em>booked</em> in one message.</h1>
+      <p class="lead">MDA Hair Style is a private, ladies-only salon near National Paint on the way to Al Nada, Sharjah. Send us a WhatsApp and we'll get you booked — no calls, no forms.</p>
+      <div class="hero-ctas">
+        <a class="btn hero-whatsapp" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.07c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.03.24-3.45-.72-2.91-1.16-4.77-4.12-4.92-4.31-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.28.14.47.21.53.34.07.12.07.72-.17 1.39Z"/></svg>
+          Book on WhatsApp
+        </a>
+        <a href="#services" class="btn btn-outline">View Services</a>
+      </div>
+      <div class="hero-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Near National Paint, on the way to Al Nada — Sharjah
+      </div>
+    </div>
+    <div style="position:relative;">
+      <div class="hero-art">
+        <img src="https://images.pexels.com/photos/1654834/pexels-photo-1654834.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Elegant hair salon interior at MDA Hair Style" loading="eager">
+      </div>
+      <div class="hero-badge">
+        <div class="stars">★★★★★</div>
+        <div>
+          <div class="num">5.0</div>
+          <div class="txt">Client rating</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>Our Services</h2>
+      <p>Every service is finished with a wash, blow-dry, and style — book the one you need on WhatsApp.</p>
+    </div>
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-photo"><img src="https://images.pexels.com/photos/3993290/pexels-photo-3993290.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Haircut and styling at MDA Hair Style" loading="lazy"></div>
+        <div class="service-body">
+          <h3>Haircut &amp; Styling</h3>
+          <p>Precision cuts and finishing styles tailored to your face shape and hair type.</p>
+          <a class="link" data-service="Haircut & Styling">Book this →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-photo"><img src="https://images.pexels.com/photos/3993320/pexels-photo-3993320.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hair colour and highlights at MDA Hair Style" loading="lazy"></div>
+        <div class="service-body">
+          <h3>Colour &amp; Highlights</h3>
+          <p>Full colour, balayage, and highlights using ammonia-friendly, salon-grade products.</p>
+          <a class="link" data-service="Colour & Highlights">Book this →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-photo"><img src="https://images.pexels.com/photos/5368626/pexels-photo-5368626.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Keratin smoothing treatment at MDA Hair Style" loading="lazy"></div>
+        <div class="service-body">
+          <h3>Keratin &amp; Treatments</h3>
+          <p>Keratin smoothing, deep-conditioning, and repair treatments for damaged or frizzy hair.</p>
+          <a class="link" data-service="Keratin & Treatments">Book this →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-photo"><img src="https://images.pexels.com/photos/1084719/pexels-photo-1084719.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bridal and event hairstyling at MDA Hair Style" loading="lazy"></div>
+        <div class="service-body">
+          <h3>Bridal &amp; Event Styling</h3>
+          <p>Trial and on-the-day styling for weddings, engagements, and special occasions.</p>
+          <a class="link" data-service="Bridal & Event Styling">Book this →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-photo"><img src="https://images.pexels.com/photos/4783329/pexels-photo-4783329.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Blow-dry and finishing at MDA Hair Style" loading="lazy"></div>
+        <div class="service-body">
+          <h3>Blow-Dry &amp; Finish</h3>
+          <p>Quick, camera-ready blow-outs for everyday glam or a night out.</p>
+          <a class="link" data-service="Blow-Dry & Finish">Book this →</a>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-body" style="padding-top:34px;">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 4.5-4 8-8 11Z"/></svg></div>
+          <h3>Not sure what you need?</h3>
+          <p>Tell us your hair goals on WhatsApp and we'll recommend the right service.</p>
+          <a class="link" data-service="a service recommendation">Ask us →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why-section" style="background:var(--cream);">
+  <div class="wrap why">
+    <div class="why-art">
+      <img src="https://images.pexels.com/photos/8834054/pexels-photo-8834054.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Client and stylist at MDA Hair Style" loading="lazy">
+    </div>
+    <div>
+      <div class="eyebrow">Why MDA Hair Style</div>
+      <h2 style="font-size:32px;font-weight:600;margin-bottom:8px;">Made for comfort, made for you</h2>
+      <p style="color:#5a4f49;">A private, ladies-only space in Sharjah where you can relax completely — from a quick blow-dry to full bridal styling.</p>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <div><h4>Ladies-Only &amp; Private</h4><p>A fully private salon environment, exclusively for women.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/></svg></div>
+          <div><h4>Experienced Stylists</h4><p>Trained in the latest cutting, colour, and treatment techniques.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18" stroke-linecap="round"/></svg></div>
+          <div><h4>Premium Products</h4><p>Salon-grade colour and treatment lines used on every client.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div><h4>Easy WhatsApp Booking</h4><p>No phone calls needed — message us anytime and we'll confirm your slot.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="location" class="location">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Find Us</div>
+      <h2>Visit MDA Hair Style</h2>
+      <p>Located in Sharjah, near National Paint, heading in towards Al Nada.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <h3>Salon Details</h3>
+        <div class="loc-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="t">Location</div><div class="s">Near National Paint, on the way to Al Nada — Sharjah, UAE</div></div>
+        </div>
+        <div class="loc-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2.5 1.5a11 11 0 0 0 5 5L14 12l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5Z"/></svg></div>
+          <div><div class="t">WhatsApp</div><div class="s">+971 52 989 6076</div></div>
+        </div>
+        <div class="loc-row">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div><div class="t">Hours</div><div class="s">[Add your opening hours here]</div></div>
+        </div>
+        <a class="btn loc-whatsapp" target="_blank" rel="noopener" style="margin-top:8px;">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.07c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.03.24-3.45-.72-2.91-1.16-4.77-4.12-4.92-4.31-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.28.14.47.21.53.34.07.12.07.72-.17 1.39Z"/></svg>
+          Get Directions on WhatsApp
+        </a>
+      </div>
+      <div class="map-frame">
+        <iframe
+          src="https://www.google.com/maps?q=National+Paint+Roundabout+Sharjah&output=embed"
+          width="100%" height="100%" style="border:0;" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="MDA Hair Style location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Client Love</div>
+      <h2>What Clients Say</h2>
+      <p>[Placeholder — replace with your real Google / Instagram reviews once you have them]</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="stars">★★★★★</div><p>"Add a real client review here to build trust with new visitors."</p></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p>"Add a real client review here to build trust with new visitors."</p></div>
+      <div class="review-card"><div class="stars">★★★★★</div><p>"Add a real client review here to build trust with new visitors."</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-band">
+    <h2>Ready for your next look?</h2>
+    <p>Message MDA Hair Style on WhatsApp — we'll help you pick the right service and time.</p>
+    <a class="btn cta-whatsapp" target="_blank" rel="noopener" style="justify-content:center;">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.07c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.03.24-3.45-.72-2.91-1.16-4.77-4.12-4.92-4.31-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.28.14.47.21.53.34.07.12.07.72-.17 1.39Z"/></svg>
+      Message Us Now
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">MDA <span style="color:var(--rose-dark);">Hair Style</span></div>
+    <p>Ladies-Only Hair Salon · Near National Paint, on the way to Al Nada, Sharjah, UAE</p>
+    <p style="margin-top:6px;">© <span id="year"></span> MDA Hair Style. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="fab" id="fab-whatsapp" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.07c-.24.68-1.4 1.3-1.93 1.34-.5.05-1.03.24-3.45-.72-2.91-1.16-4.77-4.12-4.92-4.31-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.15.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.58.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.64.77 1.92.91.28.14.47.21.53.34.07.12.07.72-.17 1.39Z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const PHONE = "971529896076";
+  const DEFAULT_MSG = "Hi MDA Hair Style! I'd like to book an appointment.";
+  const DIRECTIONS_MSG = "Hi! Could you send me directions to the salon?";
+
+  function waLink(msg){
+    return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg);
+  }
+
+  // Wire every generic WhatsApp CTA
+  document.querySelectorAll(
+    '#nav-whatsapp, .hero-whatsapp, .cta-whatsapp, #fab-whatsapp'
+  ).forEach(el => el.href = waLink(DEFAULT_MSG));
+
+  document.querySelector('.loc-whatsapp').href = waLink(DIRECTIONS_MSG);
+
+  // Service-specific prefilled messages
+  document.querySelectorAll('.link[data-service]').forEach(el => {
+    const service = el.getAttribute('data-service');
+    el.href = waLink("Hi MDA Hair Style! I'd like to book: " + service + ".");
+    el.target = "_blank";
+    el.rel = "noopener";
+  });
+</script>
+
+</body>
+</html>
