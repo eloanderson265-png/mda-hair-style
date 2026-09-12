@@ -14,27 +14,44 @@ clarity, evidence and measurement.
 The site is **technically well built** — better than most small UAE contractor sites.
 The SEO fundamentals are already in place and do not need rebuilding.
 
-It has **one defect that is costing every enquiry**, and **no measurement at all**.
+Its main weaknesses are **no measurement at all**, **no written enquiry route**, and a
+**second, fictional business published under the same phone number**.
 
 ---
 
 ## 🔴 Critical — fix before anything else
 
-### C1. All WhatsApp buttons message a hair salon
-Every WhatsApp link sitewide points to `wa.me/971529896076` — the published number of
-*MDA Hair Style*, an unrelated ladies' salon. Not one of the company's two displayed
-numbers. Present 11–15 times per page on all 12 pages crawled, and shown as text on
-`/contact/` under the heading "WhatsApp".
+### C1. A second, fictional business is published using your phone number
+*(Revised 2026-09-12 after the owner confirmed the salon is not a real business.)*
 
-WhatsApp is the site's primary call to action. Every "Request a quote on WhatsApp",
-every floating button, every contact card currently opens a chat with the wrong business.
+The WhatsApp number on the site, **+971 52 989 6076**, is confirmed as genuinely yours,
+so the WhatsApp links are **correct**. No change needed there.
 
-**Impact:** the main conversion path produces zero enquiries for this company.
-**Fix:** replace with the correct number sitewide, then send a test message and confirm
-it arrives. **Effort:** minutes. **Requires:** the correct number from the owner, and
-access to the site files or CMS.
+The problem is the other end. A page for *"MDA Hair Style — Ladies Hair Salon in
+Sharjah"* is **live and publicly crawlable** at
+`https://eloanderson265-png.github.io/mda-hair-style/`. It carries no `noindex` tag, so
+search engines are free to index it. That page publishes:
 
-*This single fix likely outweighs every other item in this document.*
+- A business that **does not exist**
+- **Your** WhatsApp number, +971 52 989 6076
+- A different business name, a different industry, and a different Sharjah address
+- Three placeholder five-star reviews reading *"Add a real client review here"*
+- Stock photographs captioned as the real premises — e.g. `alt="Elegant hair salon
+  interior at MDA Hair Style"`
+
+**Why this matters for search.** A phone number is one of the strongest signals search
+engines use to decide which business an entity *is*. Your number is currently published
+against two contradictory identities — a Sharjah fit-out contractor and a Sharjah hair
+salon. That ambiguity works directly against the local visibility we are trying to build,
+and it will also feed any AI assistant that crawls the page.
+
+There is also a straightforward honesty problem: a public page presents invented reviews
+and stock photos as a real salon's own.
+
+**Fix:** unpublish the page — disable GitHub Pages for this repository in
+Settings → Pages. That removes it immediately and leaves the source file intact.
+**Effort:** under a minute. **Requires:** your approval and your GitHub account.
+*It is a publishing change, so I will not do it without you saying so.*
 
 ## 🟠 High
 
@@ -136,7 +153,7 @@ replacing it.
 - Draft the monthly report format and the maintenance guide
 
 ### B. Needs your factual answers
-- Correct WhatsApp number *(blocks C1 — the highest-value fix on this list)*
+- Approval to unpublish the fictional salon page *(C1)*
 - Opening hours; whether the warehouse takes visitors
 - Trade licence name, number and permitted activities
 - Which Instagram account is real

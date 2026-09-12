@@ -36,7 +36,7 @@ Last updated: 2026-09-12
 | Geo coordinates | 25.30384635925293, 55.624820709228516 | ⚠️ | `GeoCoordinates` schema |
 | Phone 1 | +971 56 328 7272 | ⚠️ | Displayed sitewide; `tel:` links |
 | Phone 2 | +971 52 338 8357 | ⚠️ | `/contact/`; `tel:` links |
-| **WhatsApp (published)** | **+971 52 989 6076 — belongs to a different business, see §6.1** | ❌ | **Conflict — do not use** |
+| WhatsApp | +971 52 989 6076 | ✅ | Confirmed by owner as the company's own number |
 | Email | info@burjalfalahtech.com | ⚠️ | `mailto:` links; schema |
 | Opening hours | — | ❌ | Not published; absent from schema |
 | Service areas | Dubai, Sharjah, Ajman | ⚠️ | `areaServed` schema; stated sitewide |
@@ -96,18 +96,24 @@ All ⚠️. Outstanding permission questions:
 
 ## 6. Conflicts and defects to resolve
 
-### 6.1 🔴 Every WhatsApp link goes to an unrelated business
-All WhatsApp links across the site point to `wa.me/971529896076`. That number,
-**+971 52 989 6076**, is the published WhatsApp number of *MDA Hair Style*, a ladies'
-hair salon in Sharjah — see `index.html` in this repository. It is not one of the two
-phone numbers the site displays for Burj Alfalah.
+### 6.1 🔴 A fictional business is published under the same phone number
+*(Revised after the owner confirmed the salon does not exist.)*
 
-The `/contact/` page also displays it in text, labelled "WhatsApp — Send a description,
-project photos and available measurements."
+The WhatsApp number **+971 52 989 6076** is the company's own, so the site's WhatsApp
+links are correct.
 
-Confirmed on all 12 pages crawled, with 11–15 WhatsApp links per page.
-**WhatsApp is the site's primary call to action, so its main conversion path currently
-delivers every enquiry to a hair salon.** Fix before any other work.
+However, a page for *"MDA Hair Style — Ladies Hair Salon in Sharjah"* is **live and
+publicly crawlable** at `https://eloanderson265-png.github.io/mda-hair-style/`, with no
+`noindex` tag. Its source is `index.html` in this repository. It publishes a business
+that does not exist, using the same phone number, under a different business name,
+industry and address, alongside three placeholder five-star reviews and stock
+photographs captioned as the real premises.
+
+A phone number is a primary entity signal in local search. Publishing it against two
+contradictory business identities undermines the local visibility this project is meant
+to build, and the invented reviews are a straightforward honesty problem.
+
+**Recommended:** unpublish via GitHub Settings → Pages. Requires the owner's approval.
 
 ### 6.2 🟠 The other domain redirects visitors away
 `burjalfalah.com` is registered until 2027-01-01 on Cloudflare, but 301-redirects to
@@ -124,13 +130,13 @@ Service areas are published as Dubai, Sharjah and Ajman, but a portfolio project
 titled "Nursery Landscape — Abu Dhabi". Either the service area is wider than stated,
 or the project is historical. Worth stating clearly either way.
 
-### 6.5 🟡 Unrelated business in this repository
-This repository also contains `index.html` for *MDA Hair Style*. Unmodified. The shared
-WhatsApp number in §6.1 suggests both sites were built from the same template.
+### 6.5 🟡 Unrelated source file in this repository
+`index.html` (the MDA Hair Style page) remains unmodified in this repository. Keeping the
+source is harmless; it is the **published** copy that causes the problem in §6.1.
 
 ## 7. Open questions for the owner
 
-1. Confirm the correct WhatsApp number for Burj Alfalah.
+1. Approval to unpublish the fictional MDA Hair Style page (§6.1).
 2. Is the `burjalfalah.com` redirect intentional, and who controls that Cloudflare account?
 3. Exact legal name and trade licence number; which authority issued it.
 4. Opening hours.
