@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Request a Quotation — Burj Alfalah (PREVIEW, NOT LIVE)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Design tokens copied from the live site's stylesheet so this drops in seamlessly */
+  :root{
+    --paper:#f8f6f1; --limestone:#efebe3; --ink:#1c2126; --dark:#12181f;
+    --muted:#5b6470; --brass:#8c5b18; --logo-gold:#fabf03;
+    --line:#1c212629; --white:#fff; --radius:10px;
+    --font-sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    --font-serif:Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-sans);
+       font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .shell{width:min(100% - 40px,760px);margin-inline:auto;padding-block:48px}
+  .banner{background:#fff4d6;border:1px solid var(--logo-gold);border-radius:var(--radius);
+          padding:12px 16px;margin-bottom:32px;font-size:14px}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);
+           font-weight:600;margin-bottom:10px}
+  h1{font-family:var(--font-serif);font-size:clamp(28px,5vw,40px);line-height:1.15;
+     margin:0 0 12px;font-weight:500}
+  .lede{color:var(--muted);margin:0 0 8px;font-size:17px}
+  .alt-route{margin:24px 0 36px;padding:16px;background:var(--limestone);
+             border-radius:var(--radius);font-size:15px}
+  .alt-route a{color:var(--brass);font-weight:600}
+  form{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+       padding:clamp(20px,4vw,32px)}
+  fieldset{border:0;padding:0;margin:0 0 28px}
+  legend{font-family:var(--font-serif);font-size:19px;padding:0;margin-bottom:4px}
+  .hint{color:var(--muted);font-size:14px;margin:0 0 16px}
+  .field{margin-bottom:18px}
+  .row{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:620px){.row{grid-template-columns:1fr 1fr}}
+  label{display:block;font-weight:600;font-size:14px;margin-bottom:6px}
+  .opt{font-weight:400;color:var(--muted)}
+  input,select,textarea{width:100%;padding:12px 14px;font:inherit;font-size:16px;
+    color:var(--ink);background:var(--white);border:1px solid #1c212640;
+    border-radius:8px;transition:border-color .15s,box-shadow .15s}
+  textarea{min-height:120px;resize:vertical}
+  input:focus-visible,select:focus-visible,textarea:focus-visible{outline:none;
+    border-color:var(--brass);box-shadow:0 0 0 3px #8c5b1826}
+  input[aria-invalid="true"],select[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:#a3231b}
+  .err{color:#a3231b;font-size:13px;margin-top:5px;min-height:0}
+  .err:empty{display:none}
+  .consent{display:flex;gap:12px;align-items:flex-start;background:var(--limestone);
+           padding:16px;border-radius:8px}
+  .consent input{width:20px;height:20px;flex:0 0 auto;margin-top:2px;accent-color:var(--brass)}
+  .consent label{font-weight:400;font-size:14px;margin:0}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  button{width:100%;padding:16px 24px;font:inherit;font-weight:600;font-size:16px;
+    color:var(--white);background:var(--dark);border:0;border-radius:8px;cursor:pointer;
+    transition:background .15s}
+  button:hover{background:#26333e}
+  button:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+  button[disabled]{opacity:.6;cursor:progress}
+  .foot{color:var(--muted);font-size:13px;margin-top:16px;text-align:center}
+  .ok{display:none;background:var(--white);border:1px solid var(--line);
+      border-left:4px solid var(--brass);border-radius:var(--radius);padding:28px}
+  .ok h2{font-family:var(--font-serif);margin:0 0 8px;font-weight:500}
+  [hidden]{display:none!important}
+</style>
+</head>
+<body>
+<main class="shell">
+
+  <p class="banner"><strong>Preview only.</strong> This page is not live and sends nothing.
+  The form's destination is unset — see <code>deliverables/lead-capture-setup.md</code>.</p>
+
+  <p class="eyebrow">Request a quotation</p>
+  <h1>Tell us about your space.</h1>
+  <p class="lede">A few details let us come back with a realistic scope and a sensible
+  quotation, rather than a guess. It takes about two minutes.</p>
+
+  <div class="alt-route">
+    Prefer to talk? Message us on
+    <a id="wa" href="https://wa.me/971529896076?text=Hello%20Burj%20Alfalah%2C%20I%20would%20like%20to%20request%20a%20quotation.">WhatsApp</a>
+    or call <a href="tel:+971563287272">+971 56 328 7272</a>. Photos and measurements help either way.
+  </div>
+
+  <div class="ok" id="ok" role="status" aria-live="polite">
+    <h2>Thank you — your enquiry has been sent.</h2>
+    <p>We aim to respond within one working day. If your project is urgent, message us on
+    WhatsApp and mention that you've submitted the form.</p>
+  </div>
+
+  <form id="form" novalidate>
+    <fieldset>
+      <legend>Your details</legend>
+      <p class="hint">So we know who to reply to.</p>
+      <div class="row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+          <p class="err" id="name-err"></p>
+        </div>
+        <div class="field">
+          <label for="phone">Phone / WhatsApp</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel"
+                 placeholder="+971 5X XXX XXXX" required>
+          <p class="err" id="phone-err"></p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">Email <span class="opt">— optional</span></label>
+        <input id="email" name="email" type="email" autocomplete="email">
+        <p class="err" id="email-err"></p>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>The project</legend>
+      <p class="hint">Rough answers are fine. Nothing here is binding.</p>
+      <div class="row">
+        <div class="field">
+          <label for="type">Type of work</label>
+          <select id="type" name="project_type" required>
+            <option value="">Please choose…</option>
+            <option>Fit-out &amp; renovation</option>
+            <option>Bespoke joinery</option>
+            <option>Flooring</option>
+            <option>Electrical</option>
+            <option>Plumbing</option>
+            <option>More than one of these</option>
+            <option>Not sure yet</option>
+          </select>
+          <p class="err" id="type-err"></p>
+        </div>
+        <div class="field">
+          <label for="property">Property type</label>
+          <select id="property" name="property_type" required>
+            <option value="">Please choose…</option>
+            <option>Villa</option>
+            <option>Apartment</option>
+            <option>Office</option>
+            <option>Retail / showroom</option>
+            <option>Restaurant / café</option>
+            <option>Other</option>
+          </select>
+          <p class="err" id="property-err"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="emirate">Location</label>
+          <select id="emirate" name="emirate" required>
+            <option value="">Please choose…</option>
+            <option>Dubai</option>
+            <option>Sharjah</option>
+            <option>Ajman</option>
+            <option>Elsewhere in the UAE</option>
+          </select>
+          <p class="err" id="emirate-err"></p>
+        </div>
+        <div class="field">
+          <label for="area">Area <span class="opt">— optional</span></label>
+          <select id="area" name="area">
+            <option value="">Not sure</option>
+            <option>Under 500 sq ft</option>
+            <option>500 – 1,000 sq ft</option>
+            <option>1,000 – 2,500 sq ft</option>
+            <option>2,500 – 5,000 sq ft</option>
+            <option>Over 5,000 sq ft</option>
+            <option>Single item (e.g. one wardrobe)</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="budget">Budget range <span class="opt">— optional</span></label>
+          <select id="budget" name="budget">
+            <option value="">Prefer to discuss</option>
+            <option>Under AED 10,000</option>
+            <option>AED 10,000 – 30,000</option>
+            <option>AED 30,000 – 75,000</option>
+            <option>AED 75,000 – 150,000</option>
+            <option>Over AED 150,000</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="timing">Target start <span class="opt">— optional</span></label>
+          <select id="timing" name="timing">
+            <option value="">Not decided</option>
+            <option>As soon as possible</option>
+            <option>Within 1 month</option>
+            <option>1 – 3 months</option>
+            <option>3 – 6 months</option>
+            <option>Just researching</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="details">What needs doing?</label>
+        <textarea id="details" name="details" required
+          placeholder="For example: replacing a kitchen in a 2-bedroom apartment — new units, worktop and splashback. Existing kitchen needs removing."></textarea>
+        <p class="err" id="details-err"></p>
+        <p class="hint" style="margin-top:6px">Photos and measurements speed things up a
+        lot — you can send them on WhatsApp after submitting.</p>
+      </div>
+    </fieldset>
+
+    <!-- Spam trap: hidden from people, tempting to bots. Submissions with this filled are discarded. -->
+    <div class="hp" aria-hidden="true">
+      <label for="company_website">Leave this field empty</label>
+      <input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="field consent">
+      <input id="consent" name="consent" type="checkbox" required>
+      <label for="consent">I'm happy for Burj Alfalah to contact me about this enquiry by
+      phone, WhatsApp or email. <span class="opt">We won't add you to any marketing list,
+      and we don't share your details with anyone else.</span></label>
+    </div>
+    <p class="err" id="consent-err" style="margin:-8px 0 18px"></p>
+
+    <button type="submit" id="submit">Send enquiry</button>
+    <p class="foot">We usually reply within one working day.</p>
+  </form>
+</main>
+
+<script>
+(function(){
+  var form=document.getElementById('form'), ok=document.getElementById('ok'),
+      btn=document.getElementById('submit');
+
+  // Where submissions go. Unset on purpose — see lead-capture-setup.md.
+  var ENDPOINT='';
+
+  var rules={
+    name:     function(v){ return v.trim().length>=2 || 'Please enter your name.'; },
+    phone:    function(v){ return /^[+()\-\s\d]{7,}$/.test(v.trim()) || 'Please enter a phone number we can reach you on.'; },
+    email:    function(v){ return v.trim()==='' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || 'That email address doesn’t look right.'; },
+    type:     function(v){ return v!=='' || 'Please choose the type of work.'; },
+    property: function(v){ return v!=='' || 'Please choose the property type.'; },
+    emirate:  function(v){ return v!=='' || 'Please choose a location.'; },
+    details:  function(v){ return v.trim().length>=10 || 'A sentence or two about the work, please.'; }
+  };
+
+  function check(id){
+    var el=document.getElementById(id), err=document.getElementById(id+'-err');
+    var res=rules[id](el.value);
+    var bad=res!==true;
+    el.setAttribute('aria-invalid',bad?'true':'false');
+    if(err) err.textContent=bad?res:'';
+    return !bad;
+  }
+
+  Object.keys(rules).forEach(function(id){
+    var el=document.getElementById(id);
+    el.addEventListener('blur',function(){check(id);});
+    el.addEventListener('input',function(){
+      if(el.getAttribute('aria-invalid')==='true') check(id);
+    });
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    var valid=Object.keys(rules).map(check).every(Boolean);
+
+    var consent=document.getElementById('consent');
+    var cErr=document.getElementById('consent-err');
+    if(!consent.checked){
+      cErr.textContent='Please confirm we may contact you about this enquiry.';
+      consent.setAttribute('aria-invalid','true');
+      valid=false;
+    } else { cErr.textContent=''; consent.setAttribute('aria-invalid','false'); }
+
+    if(!valid){
+      var first=form.querySelector('[aria-invalid="true"]');
+      if(first){ first.focus(); first.scrollIntoView({behavior:'smooth',block:'center'}); }
+      return;
+    }
+
+    // Silently discard bot submissions; show success so the bot doesn't retry.
+    if(document.getElementById('company_website').value!==''){ succeed(); return; }
+
+    if(!ENDPOINT){
+      alert('PREVIEW ONLY\n\nThe form validated correctly, but no destination is configured, so nothing was sent.');
+      return;
+    }
+
+    btn.disabled=true; btn.textContent='Sending…';
+    fetch(ENDPOINT,{
+      method:'POST',
+      headers:{'Accept':'application/json'},
+      body:new FormData(form)
+    }).then(function(r){
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      succeed();
+    }).catch(function(){
+      btn.disabled=false; btn.textContent='Send enquiry';
+      alert('Sorry — that didn’t send. Please try again, or message us on WhatsApp.');
+    });
+  });
+
+  function succeed(){
+    form.hidden=true;
+    ok.style.display='block';
+    ok.scrollIntoView({behavior:'smooth',block:'center'});
+    // Fires only once GA4 exists. Counts a real submission, never a click.
+    if(typeof window.gtag==='function'){
+      window.gtag('event','generate_lead',{form_name:'quotation_request'});
+    }
+  }
+})();
+</script>
+</body>
+</html>
